@@ -1,0 +1,13 @@
+.container1 .div_img{
+    display: flex;
+    height: 100%;
+    width: 110%;
+}
+.container2{
+    background-color: rgb(122, 14, 201);
+}
+.form{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+}
