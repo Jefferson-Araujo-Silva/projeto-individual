@@ -1,3 +1,7 @@
+.body{
+    max-width: 1229px;
+    padding: 15px;
+}
 .title{
     position: absolute;
     flex-direction: column;
@@ -8,8 +12,8 @@ main{
 }
 .linha1{
     display: flex;
-    /* position: absolute; */
     flex-direction: row;
+
 }
 main #text1{
     display: flex;
@@ -19,8 +23,11 @@ main #text1{
 }
 main #img1{
     margin-top: 13%;
+    margin-left: 40vw;
     width: 50%;
     height: 65%;
+    position: absolute;
+
 }
 main #text2{
     display: flex;
@@ -32,7 +39,14 @@ main #text2{
 }
 main #img2{
     position: absolute;
-    margin-top: 45%;
+    margin-top: 40%;
     width: 30%;
     margin-left: -90%;
 }
+.linha3{
+    display: flex;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 80%;
+}
+
