@@ -1,0 +1,38 @@
+.title{
+    position: absolute;
+    flex-direction: column;
+    margin-left: 16%;
+}
+main{
+    display: flex;
+}
+.linha1{
+    display: flex;
+    /* position: absolute; */
+    flex-direction: row;
+}
+main #text1{
+    display: flex;
+    text-align: left;
+    width: 50%;
+    margin-top: 30%;
+}
+main #img1{
+    margin-top: 13%;
+    width: 50%;
+    height: 65%;
+}
+main #text2{
+    display: flex;
+    position: absolute;
+    text-align: right;
+    width: 50%;
+    margin-left: -50%;
+    margin-top: 55%;
+}
+main #img2{
+    position: absolute;
+    margin-top: 45%;
+    width: 30%;
+    margin-left: -90%;
+}
