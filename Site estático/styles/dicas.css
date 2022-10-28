@@ -65,18 +65,20 @@ main #img2{
     display: flex;
     flex-direction: row;
     margin-top: 115%;
-    margin-left: 15%;
+    margin-left: 20%;
     justify-content: space-between;
     align-items: center;
 }
-.btn a{
-    color:white;
+.btn li{
+    display: flex;
     display: inline-block;
+    margin: 20px;
     border: 2px solid rgb(122, 14, 201);
     border-radius: 15px;
-    margin: 20px;
+    padding: 10px;
 }
-.btn a:hover{
+
+.btn li:hover{
     background-color: rgb(122, 14, 201);
     color: white;
     transition: 0.9s;

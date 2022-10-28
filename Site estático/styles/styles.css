@@ -25,7 +25,7 @@ header{
     flex-direction: column;
     line-height: 10px;
 }
-li{
+header li{
     display: inline-block;
     margin: 20px;
 }

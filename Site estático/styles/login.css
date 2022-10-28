@@ -1,36 +1,25 @@
-body{
-    background-image: url("http://static1.squarespace.com/static/5702d5548259b5d3259d5a84/t/5e2e33f954f647335ddc5685/1580086266892/Gantry_Social.png?format=1500w");
-    background-repeat: no-repeat;
-    background-size: 110%;
+main{
+    /* height: 100%; */
+    /* align-items: center; */
+    justify-content: center
 }
 
 .container2{
-    margin-top: -2%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
-}
-.container1{
-    margin-top: -2%;
 }
 
 .container1 img{
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-}
-
-.container1 .div_img{
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-img{
-    width: 100%;
+    margin-top: 14%;
 }
 
 .container2{
     background-color: rgb(122, 14, 201);
+    margin-top: 5%;
 }
+
 
 .titleForm{
     display: flex;
@@ -46,20 +35,19 @@ img{
 .border{
     display: flex;
     margin-top: 5%;
-    margin-bottom: -5%;
     width: 90%;
     margin-left: 5%;
     border-bottom: 2px solid rgba(255, 255, 255, 0.233);
 }
 
-.form{
+.formLogin{
+    margin-top: -5%;
     align-items: center;
     margin: 45px 90px 40px 150px;
     display: flex;
     flex-direction: column;
 }
-.form .cadastrar{
-    display: flex;
+.formLogin .cadastrar{
     display: inline-block;
     margin: 20px;
     border: 2px solid rgb(34, 34, 34);
