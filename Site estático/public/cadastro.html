@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/cadastro.css">
+    <script src="./js/funcoes.js"></script>
+    <link rel="icon" type="imagem/png" href="./components/images/icon.png" />
+    <title>Our House | Cadastro</title>
+</head>
+<body>
+    
+    <main>
+        <div class="container1">
+            <div class="div_img">
+                <img src="./components/images/login.png" alt="" class="quadra">
+            </div>
+        </div>
+        <div class="container2">
+            <div class="titleForm">
+                <h1>Junte-se ao nosso time</h1>
+                <a href="./login.html"><li class="logar">Já tem conta? Logar</li></a>
+            </div>
+            <div class="border"></div>
+
+            <div class="form">
+                <input placeholder="Nome" type="text" id="in_nome">
+                <input placeholder="Email" type="email" id="in_email">
+                <input placeholder="Senha" type="password" id="in_senha">
+                <input placeholder="Confirmação de senha" type="password" id="in_confirmSenha">
+                <button  onclick="cadastrar()"><li class="cadastrar">Cadastrar</li></button>
+                <a href="./index.html"><li class="logar">Retornar a pagina incial</li></a>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = in_nome.value;
+        var emailVar = in_email.value;
+        var senhaVar = in_senha.value;
+        var confirmacaoSenhaVar = in_confirmSenha.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            alert('Por favor, preencha todos os campos para prosseguir!')
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                alert ("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+
+                setTimeout(() => {
+                    window.location = "./login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>
