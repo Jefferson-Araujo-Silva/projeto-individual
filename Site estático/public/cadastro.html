@@ -31,6 +31,10 @@
                 <input placeholder="Email" type="email" id="in_email">
                 <input placeholder="Senha" type="password" id="in_senha">
                 <input placeholder="Confirmação de senha" type="password" id="in_confirmSenha">
+                <select id="franquias">
+                    <option value=null>----Informe sua franquia favorita----</option>
+                    <option value="1">Atltanta Hawks</option>
+                </select>
                 <button  onclick="cadastrar()"><li class="cadastrar">Cadastrar</li></button>
                 <a href="./index.html"><li class="logar">Retornar a pagina incial</li></a>
 
@@ -50,6 +54,7 @@
         var emailVar = in_email.value;
         var senhaVar = in_senha.value;
         var confirmacaoSenhaVar = in_confirmSenha.value;
+        var franquiaVar = Number(franquias.value)
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             alert('Por favor, preencha todos os campos para prosseguir!')
@@ -72,7 +77,8 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                franquiaServer: franquiaVar
             })
         }).then(function (resposta) {
 

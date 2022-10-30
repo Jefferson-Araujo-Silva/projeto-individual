@@ -56,7 +56,8 @@ img{
     align-items: center;
     margin: 45px 90px 40px 150px;
     display: flex;
-    flex-direction: column;
+
+    flex-direction:column;
 }
 .form .cadastrar{
     display: flex;
