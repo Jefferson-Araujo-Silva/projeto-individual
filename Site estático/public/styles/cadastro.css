@@ -5,12 +5,13 @@ body{
 }
 
 .container2{
-    margin-top: -2%;
+    margin-top: -3%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    margin-right: -10%;
 }
 .container1{
-    margin-top: -2%;
+    margin-top: -3%;
 }
 
 .container1 img{
@@ -25,7 +26,8 @@ body{
 }
 
 img{
-    width: 100%;
+    width: 120%;
+    margin-left: -10%;
 }
 
 .container2{
@@ -56,8 +58,13 @@ img{
     align-items: center;
     margin: 45px 90px 40px 150px;
     display: flex;
-
     flex-direction:column;
+}
+.form #franquias{
+    color: rgb(96, 96, 96);
+    font-family: poppinsregular;
+    margin-top: 20px;
+    border-radius: 15px;
 }
 .form .cadastrar{
     display: flex;

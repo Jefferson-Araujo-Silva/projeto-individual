@@ -1,24 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!DOCTYPE 
+<html lang=
+<
+    <meta charset="UT
+    <meta http-equiv="X-UA-Compatible" content="IE=e
+    <meta name="viewport" content="width=device-width, initial-scale=
+    <tDocument</t
+</
+<
 
     
-    <div id="ImpSenha"></div>
-    <div id="ImpForcaSenha"></div>
-    <div id="erroSenhaForca"></div>
-    <input type="text" id="in_senha" onkeyup="validarSenhaForca()">
+    <div id="ImpSe<
+    <div id="ImpForcaSe<
+    <div id="erroSenhaFo<
+    <input type="text" id="in_senha" onkeyup="validarSenhaForc
+    
+('Lakers',),
+('Celtics',),
+('Bucks',),
+('Nets',),
+('Warriors',),
+('Jazz',),
+('Spurs',),
+('Raptors',),
+('Cavaliers',),
+('Mavericks',),
+('Pelicans',),
+('Thunder',),
+('Heat',),
+('Grizzlies',),
+('Kings',),
+('Hornets',),
+('Knicks',),
+('Clippers',),
+('Magic',),
+('Timberwolves',),
+('Blazers',),
+('Suns',),
+('Nuggets',),
+('Wizards',),
+('76ers',),
+('Bulls',),
+('Pistons',),
+('Rockets',),
+('Pacers',);
    
     
-</body>
-</html>
+</
+</
 
-<script>
+<sc
 
     function validarSenhaForca(){
         var senha = document.getElementById('in_senha').value;
@@ -26,22 +56,22 @@
 
         document.getElementById("ImpSenha").innerHTML = "Senha" + senha;
 
-        if((senha.length >= 4) && (senha.length <= 7)){
+        if((senha.len= 4) && (senha.length <= 7)){
             forca += 10
         }
-        else if(senha.length > 7){
+        else if(senha.len 7){
             forca += 25;
         }
 
-        if((senha.length >= 5) && (senha.match(/[a-z]+/))){
+        if((senha.len= 5) && (senha.match(/[a-z]+/))){
             forca += 10;
         }
 
-        if((senha.length >= 6) && (senha.match(/[A-Z]+/))){
+        if((senha.len= 6) && (senha.match(/[A-Z]+/))){
             forca += 20;
         }
 
-        if((senha.length >= 7) && (senha.match(/[@#$!%;*.]+/))){
+        if((senha.len= 7) && (senha.match(/[@#$!%;*.]+/))){
             forca += 25
         }
 
@@ -54,19 +84,19 @@
             document.getElementById("erroSenhaForca").innerHTML = "Fraca";
 
         }
-        else if((forca >= 30) && (forca < 50)){
+        else if((fo= 30) && (forca < 50)){
             document.getElementById("erroSenhaForca").innerHTML = "Média";
 
         }
-        else if((forca >= 50) && (forca < 70)){
+        else if((fo= 50) && (forca < 70)){
             document.getElementById("erroSenhaForca").innerHTML = "Forte";
 
         }
-        else if((forca >= 70) && (forca < 100)){
+        else if((fo= 70) && (forca < 100)){
             document.getElementById("erroSenhaForca").innerHTML = "Excelente";
 
         }
     }
 
 
-</script>
+</sc

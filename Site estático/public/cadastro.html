@@ -29,12 +29,41 @@
             <div class="form">
                 <input placeholder="Nome" type="text" id="in_nome">
                 <input placeholder="Email" type="email" id="in_email">
+                <select id="franquias">
+                    <option value=null>━Informe sua franquia favorita━</option>
+                    <option value="1">Hawks</option>
+                    <option value="2">Lakers</option>
+                    <option value="3">Celtics</option>
+                    <option value="4">Bucks</option>
+                    <option value="5">Nets</option>
+                    <option value="6">Warriors</option>
+                    <option value="7">Jazz</option>
+                    <option value="8">Spurs</option>
+                    <option value="9">Raptors</option>
+                    <option value="10">Cavaliers</option>
+                    <option value="11">Mavericks</option>
+                    <option value="12">Pelicans</option>
+                    <option value="13">Thunder</option>
+                    <option value="14">Heat</option>
+                    <option value="15">Grizzlies</option>
+                    <option value="16">Kings</option>
+                    <option value="17">Hornets</option>
+                    <option value="18">Knicks</option>
+                    <option value="19">Clippers</option>
+                    <option value="20">Magic</option>
+                    <option value="21">Timberwolves</option>
+                    <option value="22">Blazers</option>
+                    <option value="23">Suns</option>
+                    <option value="24">Nuggets</option>
+                    <option value="25">Wizards</option>
+                    <option value="26">76ers</option>
+                    <option value="27">Bulls</option>
+                    <option value="28">Pistons</option>
+                    <option value="29">Rockets</option>
+                    <option value="30">Pacers</option>
+                </select>
                 <input placeholder="Senha" type="password" id="in_senha">
                 <input placeholder="Confirmação de senha" type="password" id="in_confirmSenha">
-                <select id="franquias">
-                    <option value=null>----Informe sua franquia favorita----</option>
-                    <option value="1">Atltanta Hawks</option>
-                </select>
                 <button  onclick="cadastrar()"><li class="cadastrar">Cadastrar</li></button>
                 <a href="./index.html"><li class="logar">Retornar a pagina incial</li></a>
 
@@ -52,9 +81,9 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = in_nome.value;
         var emailVar = in_email.value;
+        var franquiaVar = Number(franquias.value)
         var senhaVar = in_senha.value;
         var confirmacaoSenhaVar = in_confirmSenha.value;
-        var franquiaVar = Number(franquias.value)
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             alert('Por favor, preencha todos os campos para prosseguir!')
