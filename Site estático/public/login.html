@@ -80,9 +80,10 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.FK_USUARIO = json.fk;
 
                     setTimeout(function () {
-                        window.location.href = "index.html";
+                        window.location.href = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

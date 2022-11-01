@@ -7,6 +7,16 @@ main{
     justify-content: center;
 }
 
+.title h1{
+    display: flex;
+    color: white; 
+    text-shadow: #000 2px 1px 1px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 3px solid rgb(122, 14, 201);
+}
+
 
 .container1{
    display: flex;
