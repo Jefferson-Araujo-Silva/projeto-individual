@@ -1,58 +1,3 @@
-.header-left a {
-  text-decoration: none;
-  color: white;
-}
-
-.header-left {
-  position: fixed;
-  top: 0;
-  left: 10px;
-  z-index: 999;
-  height: 100vh;
-  width: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
-  transition-property: all;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-}
-.header-left:hover{
-  width: 15%;
-}
-
-.header-left a span{
-  text-decoration: none;
-  color: white;
-  position: absolute;
-  left: -100px;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-  text-align: left;
-}
-.header-left:hover a span{
-  left: 80px;
-  opacity: 1;
-
-}
-.header-left h3{
-  opacity: 0;
-  width: 100%;
-  transition-property: all;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.header-left:hover h3{
-  opacity: 1;
-
-}
 .title{
   display: flex;
   justify-content: center;
@@ -76,7 +21,7 @@
   display: flex;
   margin: 10% auto 0% 10%;
   flex-direction: column;
-  
+
 } 
 
 
