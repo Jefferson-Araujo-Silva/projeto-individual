@@ -2,63 +2,127 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <title>AquaTech | Dashboards</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/media.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./styles/dashboards.css">
     <script src="./js/funcoes.js"></script>
 </head>
 
-    <div class="janela">
-        <div class="header-left">
-            <a href="./index.html"><img src="./components/images/logo.png" id="logo"alt=""></a>           
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                <h3><span id="b_id">ID</span>!</h3>
-            </div>    
-            
-                <a href="./cards.html">
-                    <a href=""><img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"/> <span>Perfil</span>
-                </a>
-           
-
-                <a href="">
-                    <img src="https://img.icons8.com/small/96/7950F2/bar-chart.png" id="social"/> <span>Dashboard</span> 
-                </a>
-
-           
-
-           
-                <a href="./mural.html">
-                    <img src="https://img.icons8.com/small/96/7950F2/video-playlist.png" id="social"/> <span>Tutoriais</span>
-                </a>
-            
-                <a href="">
-                    <img src="https://img.icons8.com/small/96/7950F2/controller.png" id="social"/> <span>minigames</span>
-                </a>
-            
-                <a href="login.html">
-                    <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"/> <span>Logout</span>
-                </a> 
-            </div>
-        </div>
+<div class="header-left">
+    <a href="./index.html"><img src="./components/images/logo.png" id="logo"alt=""></a>           
+    <div class="hello">
+        <h3>Olá, <span id="b_usuario">usuário</span></h3>
+        <h3>Time: <span id="b_senha">Franquia</span></span!</h3></span>
     </div>
+        
+    <a href="./cards.html">
+        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Perfil</span>
+    </a>
+       
+    <a href="">
+        <img src="https://img.icons8.com/small/96/7950F2/bar-chart.png" id="social"><span>Dashboard</span> 
+    </a>
+       
+    <a href="./mural.html">
+        <img src="https://img.icons8.com/small/96/7950F2/video-playlist.png" id="social"><span>Tutoriais</span>
+    </a>
+    
+    <a href="">
+        <img src="https://img.icons8.com/small/96/7950F2/controller.png" id="social"><span>Minigames</span>
+    </a>
+    
+    <a href="login.html">
+        <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"><span>Logout</span>
+    </a> 
+</div>
 
-
-</body>
+<div class="title">
+    <h1>Seja Bem-vindo à sua tela de usuário!</h1>
+</div>
+<div class="janela">
+   <div class="container">
+       <div class="graf">
+           <div>
+               <p>Principais franquias escolhidas por usuários:</p>
+               <canvas id="myChart" width="720px" height="300px"></canvas>
+           </div>
+       </div>
+   </div>
+   <div class="container2">
+       <p>Infos sobre a franquia do <span id="b_franquia">Franquia</span></p>
+       <h3>Cidade:<span id="b_cidade"></span></h3>
+       <h3>Arena:<span id="b_arena"></span></h3>
+   </div>
+</div>
 
 </html>
 <script>
 
-b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-b_franquia.innerHTML = sessionStorage.FK_USUARIO;
-b_franquia.innerHTML = sessionStorage.FK_USUARIO;
-b_id.innerHTML = sessionStorage.ID_USUARIO;
-
+b_usuario.innerHTML = NOME_USUARIO;
+b_senha.innerHTML = sessionStorage.NOME_FRANQUIA;
 
 </script>
+<script>
+    const labels = [
+        'Lakers',
+        'Hawks',
+        'Celtics',
+        'Bucks',
+        'Nets',
+        'Warriors',
+        'Jazz',
+        'Spurs',
+        'Raptors',
+        'Cavaliers',
+        'Mavericks',
+        'Pelicans',
+        'Thunder',
+        'Heat',
+        'Grizzlies',
+        'Kings',
+        'Hornets',
+        'Knicks',
+        'Clippers',
+        'Magic',
+        'Timberwolves',
+        'Blazers',
+        'Suns',
+        'Nuggets',
+        'Wizards',
+        '76ers',
+        'Bulls',
+        'Pistons',
+        'Rockets',
+        'Pacers',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(122, 14, 201)',
+        borderColor: 'rgb(122, 14, 201)',
+        data: [10, 10, 12, 5, 8, 9, 11, 11, 8, 9, 1, 11, 2, 4, 5, 11, 10, 11, 2, 6, 11, 2, 10, 3, 11, 1, 10, 2, 1, 2, 3],
+      }]
+    };
+  
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {}
+    };
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+</script>
+   

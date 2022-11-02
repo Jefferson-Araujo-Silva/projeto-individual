@@ -7,7 +7,7 @@ function listar() {
             a.id AS idAviso,
             a.titulo,
             a.descricao,
-            a.fk_usuario,
+            u.fk_usuario,
             u.id AS idUsuario,
             u.nome,
             u.email,

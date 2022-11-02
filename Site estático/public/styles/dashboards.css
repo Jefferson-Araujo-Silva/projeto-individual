@@ -53,5 +53,30 @@
   opacity: 1;
 
 }
+.title{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  margin: 10% auto 0% 10%;
+  width: 50%;
+  flex-direction: column;
+}
+.container .graf{
+  display: flex;
+  justify-content: flex-start;
+
+}
+.janela{
+  display: flex;
+  justify-content: space-between;
+}
+.container2{
+  display: flex;
+  margin: 10% auto 0% 10%;
+  flex-direction: column;
+  
+} 
 
 
