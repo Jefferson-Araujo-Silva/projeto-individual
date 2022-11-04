@@ -66,7 +66,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var fkFranquia = req.body.franquiaServer;
-
+    
     // Faça as validações dos valores
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
@@ -78,26 +78,60 @@ function cadastrar(req, res) {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, email, senha, fkFranquia)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
             ).catch(
                 function (erro) {
                     console.log(erro);
                     console.log(
                         "\nHouve um erro ao realizar o cadastro! Erro: ",
                         erro.sqlMessage
+                        );
+                        res.status(500).json(erro.sqlMessage);
+                    }
                     );
-                    res.status(500).json(erro.sqlMessage);
                 }
-            );
-    }
-}
+            }
+    function cadastrarPerso(req, res){
+        var nomePerso = req.body.nomePersoServer;
+        var posicaoPerso = req.body.posicaoPersoServer;
+        var franquiaPerso = req.body.franquiaPersoServer;
 
-module.exports = {
-    entrar,
+        if (nomePerso == undefined) {
+            res.status(400).send("Seu nome de personagem está undefined!");
+        } else if (franquiaPerso == undefined) {
+            res.status(400).send("Sua franquia de personagem está undefined!");
+        } else if (posicaoPerso == undefined) {
+            res.status(400).send("Sua posição de personagem está undefined!");
+        } else {
+            
+            // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+            usuarioModel.cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+                ).catch(
+                    function (erro) {
+                        console.log(erro);
+                        console.log(
+                            "\nHouve um erro ao realizar o cadastro! Erro: ",
+                            erro.sqlMessage
+                            );
+                            res.status(500).json(erro.sqlMessage);
+                        }
+                        );
+                    }
+                }
+
+            
+            
+            module.exports = {
+                entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    cadastrarPerso,
 }

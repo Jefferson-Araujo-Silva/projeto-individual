@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <title>AquaTech | Dashboards</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/perfil.css">
     <link rel="stylesheet" href="./styles/header-left.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/funcoes.js"></script>
 </head>
 
@@ -44,5 +42,127 @@
         <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"><span>Logout</span>
     </a> 
 </div>
-
+<div class="title">
+    <h1>Crie seu personagem!</h1>
+    <h4>Crie um personagem para acumular pontos nos minigames!</h4>
+</div>
+<div class="janela">
+    <div class="container">
+            <p>dê um nome ao seu personagem:</p>
+            <input type="text" id="in_nomePerso">
+            <p>Escolha a posição do seu personagem:</p>
+            <select name="" id="sel_posicaoPerso">
+                <option value="PG">PG</option>
+                <option value="SF">SF</option>
+                <option value="SG">SG</option>
+                <option value="C">C</option>
+                <option value="PF">PF</option>
+            </select>
+            <p>Escolha uma franquia para o seu personagem:</p>
+            <select id="sel_franquiasPerso">
+                <option value=null>━Informe a franquia do seu personagem━</option>
+                <option value="Hawks">Hawks</option>
+                <option value="Lakers">Lakers</option>
+                <option value="Celtics">Celtics</option>
+                <option value="Bucks">Bucks</option>
+                <option value="Nets">Nets</option>
+                <option value="Warriors">Warriors</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Spurs">Spurs</option>
+                <option value="Raptors">Raptors</option>
+                <option value="Cavaliers">Cavaliers</option>
+                <option value="Mavericks">Mavericks</option>
+                <option value="Pelicans">Pelicans</option>
+                <option value="Thunder">Thunder</option>
+                <option value="Heat">Heat</option>
+                <option value="Grizzlies">Grizzlies</option>
+                <option value="Kings">Kings</option>
+                <option value="Hornets">Hornets</option>
+                <option value="Knicks">Knicks</option>
+                <option value="Clippers">Clippers</option>
+                <option value="Magic">Magic</option>
+                <option value="Timberwolves">Timberwolves</option>
+                <option value="Blazers">Blazers</option>
+                <option value="Suns">Suns</option>
+                <option value="Nuggets">Nuggets</option>
+                <option value="Wizards">Wizards</option>
+                <option value="76ers">76ers</option>
+                <option value="Bulls">Bulls</option>
+                <option value="Pistons">Pistons</option>
+                <option value="Rockets">Rockets</option>
+                <option value="Pacers">Pacers</option>
+            </select>
+            <button  onclick="cadastrarPerso()"><li class="cadastrar">Cadastrar</li></button>
+        
+    </div>
+</div>
 </body>
+<script>
+
+    b_usuario.innerHTML = NOME_USUARIO;
+    
+</script>
+<script>
+    function cadastrarPerso() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomePerso = in_nomePerso.value;
+        var posicaoPerso = sel_posicaoPerso.value;
+        var franquiaPerso = sel_franquiasPerso.value;
+
+        if (nomePerso == "" || posicaoPerso == "" || franquiaPerso == "") {
+            alert('Por favor, preencha todos os campos para prosseguir!')
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrarPerso", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomePersoServer: nomePerso,
+                posicaoPersoServer: posicaoPerso,
+                franquiaPersoServer: franquiaPerso
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                alert ("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+
+                setTimeout(() => {
+                    window.location = "./perfil.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>
