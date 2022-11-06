@@ -55,6 +55,15 @@
             Por fim treine as variações de bandeja, como bandeja reversa, floater, jelly layup, bandeja em 2 tempos, eurostep, entre várias outras.
         </div>
     </div>
+    <div id="container2">
+        <div class="btn">
+            <button id="button" onclick="descobrir()">Clique aqui para descobrir 2 jogadores de referência</button>
+        </div>
+        <br><br><br>
+        <div id="img"></div>
+        <center><div id="link"></div></center>
+        
+    </div>
     <div class="footer" id="footer">
         <div class="container4">
             <div class="imgLogo">
@@ -81,3 +90,47 @@
     
 </body>
 </html>
+<script>
+
+
+function descobrir(){
+        document.getElementById("button").style.display="none";
+        
+        var KI = "https://media.cnn.com/api/v1/images/stellar/prod/221029113210-01-kyrie-irving-102622-restricted.jpg?c=16x9&q=h_270,w_480,c_fill"
+        
+        var AI = "https://www.playmakerbrasil.com.br/sites/default/files/styles/newspage/public/field/image/iverson.jpeg?itok=URS5fDEj"
+
+        var KB = "https://www.gncnews.com.br/assets/uploads/657a5b721432f7815950ce0c956465da.jpg"
+
+        var MJ = "https://www.theplayoffs.com.br/wp-content/uploads/2020/04/michael-jordan-bulls-97-98-getty.jpg"
+
+        var JM = "https://r8p9h9p8.rocketcdn.me/wp-content/uploads/2022/06/Ja-Morant.jpg"
+
+        var TY = "https://r8p9h9p8.rocketcdn.me/wp-content/uploads/2022/01/Trae-Young.jpg"
+
+        for(i = 0; i < 2; i++){
+           var sorteado = parseInt(1 + Math.random() * 6)
+            
+            if(sorteado == 1){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=9KHVZiwQSmo"><img src=${KI} alt="Krye Irving"/></a>`               
+            }
+            else if(sorteado == 2){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=K4URcjHcRjw"><img src=${AI} alt="Allen Iverson"/></a>`
+            }
+            else if(sorteado == 3){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=RtFlNGh6jJ8"><img src=${KB} alt="Kobe Bryant"/></a>`
+            }
+            else if(sorteado == 4){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=A7obXAzJRMA"><img src=${MJ} alt="Michael Jordan"/></a>`
+            }
+            else if(sorteado == 5){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=Y7oypwyMoXY"><img src=${JM} alt="Ja Morant"/></a>`
+            }
+            else if(sorteado == 6){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=O-WTWaYyjbo"><img src=${TY} alt="Trae Young"/></a>`
+            }
+        }
+        link.innerHTML = 'Clique nas imagens para ver lances!'
+    }
+
+</script>

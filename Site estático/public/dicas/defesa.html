@@ -55,6 +55,15 @@
             Por fim procure assistir como os defensores de elite jogam, como Kawhi Leonard, Anthony Davis e Giannis Antetokounmpo.
         </div>
     </div>
+    <div id="container2">
+        <div class="btn">
+            <button id="button" onclick="descobrir()">Clique aqui para descobrir 2 jogadores de referência</button>
+        </div>
+        <br><br><br>
+        <div id="img"></div>
+        <center><div id="link"></div></center>
+        
+    </div>
     <div class="footer" id="footer">
         <div class="container4">
             <div class="imgLogo">
@@ -81,3 +90,47 @@
     
 </body>
 </html>
+<script>
+
+
+    function descobrir(){
+            document.getElementById("button").style.display="none";
+            
+            var KL = "https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/https-3A-2F-2Fairalamo-com-2Ffiles-2F2016-2F11-2F9646035-kawhi-leonard-nba-san-antonio-spurs-sacramento-kings-850x560-8845d753ae0c28f9675731e4877878c6.jpg"
+            
+            var GA = "https://bstatic.epicbuzzer.com/uploads/2020/09/USP-NBA_-Playoffs-Milwaukee-Bucks-at-Miami-Heat-e1599651901175.jpg"
+    
+            var LJ = "https://www.quintoquartobr.com/wp-content/uploads/2022/07/papailebrao.png"
+    
+            var RG = "https://istoe.com.br/wp-content/uploads/2020/07/rudy-gobert.jpg"
+    
+            var PT = "https://www.inquirer.com/resizer/9uzhDe6Gyb88amQoxLWJHZGHC8Q=/760x507/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/pmn/PSBAVKZGORCY3IPMGQNLUNIHEI.jpg"
+    
+            var DG = "https://r8p9h9p8.rocketcdn.me/wp-content/uploads/2021/12/Draymond_Green-5.jpg"
+    
+            for(i = 0; i < 2; i++){
+               var sorteado = parseInt(1 + Math.random() * 6)
+                
+                if(sorteado == 1){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=_urpk4UCIjI"><img src=${KL} alt="Kahwi Leonard"></a>`        
+                }
+                else if(sorteado == 2){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=8v8shpBK1qw"><img src=${GA} alt="Giannis Antetokounmpo"/></a>`
+                }
+                else if(sorteado == 3){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=XbZZBOvJ5xo"><img src=${LJ} alt="Lebron James"/></a>`
+                }
+                else if(sorteado == 4){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=NIJ762z5f-c"><img src=${RG} alt="Rudy Gobert"/></a>`
+                }
+                else if(sorteado == 5){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=d6Gt9DdlfOg"><img src=${PT} alt="PJ Tucker"/></a>`
+                }
+                else if(sorteado == 6){
+                    img.innerHTML += `<a href="https://www.youtube.com/watch?v=Vo85LprJoyQ"><img src=${DG} alt="Draymond Green"/></a>`
+                }
+            }
+            link.innerHTML = 'Clique nas imagens para ver lances!'
+        }
+    
+    </script>

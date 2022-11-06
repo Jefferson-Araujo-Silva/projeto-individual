@@ -27,6 +27,7 @@ function listar(req, res) {
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
@@ -99,6 +100,8 @@ function cadastrar(req, res) {
         var posicaoPerso = req.body.posicaoPersoServer;
         var franquiaPerso = req.body.franquiaPersoServer;
 
+        console.log("req", req)
+
         if (nomePerso == undefined) {
             res.status(400).send("Seu nome de personagem está undefined!");
         } else if (franquiaPerso == undefined) {
@@ -111,6 +114,8 @@ function cadastrar(req, res) {
             usuarioModel.cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso)
             .then(
                 function (resultado) {
+                    console.log("res: ", resultado);
+                    console.log("json: ", resultado.json());
                     res.json(resultado);
                 }
                 ).catch(

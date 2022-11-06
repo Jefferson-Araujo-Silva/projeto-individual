@@ -97,12 +97,9 @@
     </div>
 </div>
 </body>
-<script>
 
-    b_usuario.innerHTML = NOME_USUARIO;
-    
-</script>
 <script>
+    b_usuario.innerHTML = NOME_USUARIO;
     function cadastrarPerso() {
         aguardar();
 
@@ -133,7 +130,8 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomePersoServer: nomePerso,
                 posicaoPersoServer: posicaoPerso,
-                franquiaPersoServer: franquiaPerso
+                franquiaPersoServer: franquiaPerso,
+                idUsuario: idUsuarioSer
             })
         }).then(function (resposta) {
 

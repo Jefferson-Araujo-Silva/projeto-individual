@@ -56,6 +56,15 @@
            Por fim, faça um treino visando arremessar de todos os pontos da quadra, para você se tornar um arremessador flexível!</p>
         </div>
     </div>
+    <div id="container2">
+        <div class="btn">
+            <button id="button" onclick="descobrir()">Clique aqui para descobrir 2 jogadores de referência</button>
+        </div>
+        <br><br><br>
+        <div id="img"></div>
+        <center><div id="link"></div></center>
+        
+    </div>
     <div class="footer" id="footer">
         <div class="container4">
             <div class="imgLogo">
@@ -77,8 +86,49 @@
             </div>
         </div>
     </div>
-
-
     
 </body>
 </html>
+<script>
+
+    function descobrir(){
+        document.getElementById("button").style.display="none";
+        
+        var SC = "https://imagens.ebc.com.br/4WOOU5hIy9UNbyFq58eX7isFGbk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2022-06-17t032652z_1858787369_mt1usatoday18549318_rtrmadp_3_nba-finals-golden-state-warriors-at-boston-celtics.jpg?itok=-WTmSMVB"
+        
+        var KT = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/10/896/500/GettyImages-1244282766.jpg?ve=1&tl=1"
+
+        var DM = "https://cdn.nba.com/manage/2022/07/GettyImages-1361873577-scaled-e1657315765623.jpg"
+
+        var KD = "https://nypost.com/wp-content/uploads/sites/2/2022/11/kevin-durant-defends-kyrie-irving.jpg"
+
+        var RA = "https://blog.futfanatics.com.br/wp-content/uploads/2022/04/RAY-ALLEN.jpg"
+
+        var RM = "https://blog.futfanatics.com.br/wp-content/uploads/2022/04/REGGIE-MILER.jpg"
+
+        for(i = 0; i < 2; i++){
+           var sorteado = parseInt(1 + Math.random() * 6)
+            
+            if(sorteado == 1){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=flm-cZ7r6eE"><img src=${SC} alt="Stephen Curry"/></a>`               
+            }
+            else if(sorteado == 2){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=VKIV9nUY7wQ"><img src=${KT} alt="Klay Thompson"/></a>`
+            }
+            else if(sorteado == 3){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=RxxueDqPAyU"><img src=${DM} alt="Damin Lillard"/></a>`
+            }
+            else if(sorteado == 4){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=I8SWa2R4Gmk"><img src=${KD} alt="Kevin Durant"/></a>`
+            }
+            else if(sorteado == 5){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=Ag9oouHQN-M"><img src=${RA} alt="Ray Allen"/></a>`
+            }
+            else if(sorteado == 6){
+                img.innerHTML += `<a href="https://www.youtube.com/watch?v=rmme_HV1ccY"><img src=${RM} alt="Reggie Miller"/></a>`
+            }
+        }
+        link.innerHTML = 'Clique nas imagens para ver lances!'
+    }
+
+</script>
