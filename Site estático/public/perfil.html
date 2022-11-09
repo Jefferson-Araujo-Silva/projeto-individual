@@ -19,18 +19,18 @@
     <a href="./index.html"><img src="./components/images/logo.png" id="logo"alt=""></a>           
     <div class="hello">
         <h3>Olá, <span id="b_usuario">usuário</span></h3>
-        <h3>Time: <span id="b_senha">Franquia</span></span!</h3></span>
+        <h3>Time: <span id="b_franquia">Franquia</span></span!</h3></span>
     </div>
         
-    <a href="./cards.html">
+    <a href="./perfil.html">
         <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Perfil</span>
     </a>
        
-    <a href="">
+    <a href="./dashboard.html">
         <img src="https://img.icons8.com/small/96/7950F2/bar-chart.png" id="social"><span>Dashboard</span> 
     </a>
        
-    <a href="./mural.html">
+    <a href="./">
         <img src="https://img.icons8.com/small/96/7950F2/video-playlist.png" id="social"><span>Tutoriais</span>
     </a>
     
@@ -99,7 +99,9 @@
 </body>
 
 <script>
-    b_usuario.innerHTML = NOME_USUARIO;
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_franquia.innerHTML = sessionStorage.TIME_FRANQUIA;
     function cadastrarPerso() {
         aguardar();
 
@@ -108,6 +110,7 @@
         var nomePerso = in_nomePerso.value;
         var posicaoPerso = sel_posicaoPerso.value;
         var franquiaPerso = sel_franquiasPerso.value;
+        var fkUsuario = Number(sessionStorage.getItem("ID_USUARIO"))
 
         if (nomePerso == "" || posicaoPerso == "" || franquiaPerso == "") {
             alert('Por favor, preencha todos os campos para prosseguir!')
@@ -131,16 +134,15 @@
                 nomePersoServer: nomePerso,
                 posicaoPersoServer: posicaoPerso,
                 franquiaPersoServer: franquiaPerso,
-                idUsuario: idUsuarioSer
+                fkUsuarioServer: fkUsuario
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                // cardErro.style.display = "block";
-
-                alert ("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+                
+                alert ("Boa! Personagem cadastrado com sucesso")
 
                 setTimeout(() => {
                     window.location = "./perfil.html";

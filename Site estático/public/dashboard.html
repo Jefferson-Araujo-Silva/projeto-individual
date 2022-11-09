@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <title>AquaTech | Dashboards</title>
+    <title>Our House | Dashboard</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/media.css">
     <link rel="stylesheet" href="./styles/header-left.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="imagem/png" href="./components/images/icon.png" />
     <link rel="stylesheet" href="./styles/dashboards.css">
     <script src="./js/funcoes.js"></script>
 </head>
@@ -38,7 +39,7 @@
         <img src="https://img.icons8.com/small/96/7950F2/controller.png" id="social"><span>Minigames</span>
     </a>
     
-    <a href="login.html">
+    <a href="login.html" onclick="sair()">
         <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"><span>Logout</span>
     </a> 
 </div>
@@ -57,14 +58,17 @@
    </div>
    <div class="container2">
        <p>Infos sobre a franquia do <span id="b_franquia">Franquia</span></p>
-       <h3>Cidade:<span id="b_cidade"></span></h3>
-       <h3>Arena:<span id="b_arena"></span></h3>
+       <h3>Cidade: <span id="b_cidade"></span></h3>
+       <h3>Arena: <span id="b_arena"></span></h3>
    </div>
 </div>
 
 </html>
 <script>
         b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        b_franquia.innerHTML = sessionStorage.TIME_FRANQUIA;
+        b_cidade.innerHTML = sessionStorage.CIDADE_FRANQUIA;
+        b_arena.innerHTML = sessionStorage.ARENA_FRANQUIA;
 
     const labels = [
         'Lakers',
@@ -120,5 +124,12 @@
       document.getElementById('myChart'),
       config
     );
+</script>
+<script>
+
+    function sair(){
+        limparSessao()
+    }
+
 </script>
    

@@ -72,19 +72,25 @@
             if (resposta.ok) {
                 console.log(resposta);
                 alert ("Login realizado com sucesso! Redirecionando para tela do dashboard...")
-
+                
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-
+                    
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.SENHA_USUARIO = json.senha;
                     sessionStorage.NOME_USUARIO = json.nome;
-
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.FKFRANQUIA_USUARIO = json.fkFranquia;
+                    sessionStorage.TIME_FRANQUIA = json.time;
+                    sessionStorage.CIDADE_FRANQUIA = json.cidade;
+                    sessionStorage.ARENA_FRANQUIA = json.arena;
+                    
+                    
                     setTimeout(function () {
                         window.location.href = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
-
+                    
                 });
 
             } else {

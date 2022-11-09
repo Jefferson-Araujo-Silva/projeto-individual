@@ -27,17 +27,23 @@ body{
 
 img{
     width: 120%;
-    margin-left: -10%;
+}
+
+.container1 .senha{
+    position:absolute;
+    margin-top: -25%;
+    margin-left: 20%;
+    font-weight: bolder;
 }
 
 .container2{
     background-color: rgb(122, 14, 201);
+    position: relative;
 }
 
 .titleForm{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .logar{

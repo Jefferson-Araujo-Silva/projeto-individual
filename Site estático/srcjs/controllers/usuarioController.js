@@ -27,7 +27,7 @@ function listar(req, res) {
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    
+
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
@@ -99,6 +99,7 @@ function cadastrar(req, res) {
         var nomePerso = req.body.nomePersoServer;
         var posicaoPerso = req.body.posicaoPersoServer;
         var franquiaPerso = req.body.franquiaPersoServer;
+        var fkUsuario = req.body.fkUsuarioServer;
 
         console.log("req", req)
 
@@ -111,12 +112,10 @@ function cadastrar(req, res) {
         } else {
             
             // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-            usuarioModel.cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso)
+            usuarioModel.cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso, fkUsuario)
             .then(
                 function (resultado) {
                     console.log("res: ", resultado);
-                    console.log("json: ", resultado.json());
-                    res.json(resultado);
                 }
                 ).catch(
                     function (erro) {
