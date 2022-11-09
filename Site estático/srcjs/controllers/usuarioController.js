@@ -109,13 +109,17 @@ function cadastrar(req, res) {
             res.status(400).send("Sua franquia de personagem está undefined!");
         } else if (posicaoPerso == undefined) {
             res.status(400).send("Sua posição de personagem está undefined!");
+        } else if (franquiaPerso == undefined) {
+            res.status(400).send("Sua franquia de personagem está undefined!");
+        } else if (fkUsuario == undefined) {
+            res.status(400).send("Sua fkUsuario de personagem está undefined!");
         } else {
             
             // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
             usuarioModel.cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso, fkUsuario)
             .then(
                 function (resultado) {
-                    console.log("res: ", resultado);
+                    res.json(resultado);
                 }
                 ).catch(
                     function (erro) {

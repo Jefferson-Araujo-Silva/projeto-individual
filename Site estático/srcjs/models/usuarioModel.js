@@ -37,7 +37,7 @@ function cadastrarPerso(nomePerso, posicaoPerso, franquiaPerso, fkUsuario){
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
         var instrucao = `
-        INSERT INTO personagem (nomePerso, posicaoPerso, franquiaPerso, fkUsuario) VALUES ('${nomePerso}', '${posicaoPerso}', '${franquiaPerso}', ${fkUsuario});
+        INSERT INTO personagem (nomePerso, posicaoPerso, equipe, fkUsuario) VALUES ('${nomePerso}', '${posicaoPerso}', '${franquiaPerso}', ${fkUsuario});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

@@ -23,8 +23,11 @@
         <h3>Olá, <span id="b_usuario">usuário</span></h3>
     </div>
         
-    <a href="perfil.html">
-        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Perfil</span>
+    <a href="personagem.html" id="personagem">
+        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Personagem</span>
+    </a>
+    <a href="perfil.html" id="perfil">
+        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Personagem</span>
     </a>
        
     <a href="">
@@ -69,6 +72,17 @@
         b_franquia.innerHTML = sessionStorage.TIME_FRANQUIA;
         b_cidade.innerHTML = sessionStorage.CIDADE_FRANQUIA;
         b_arena.innerHTML = sessionStorage.ARENA_FRANQUIA;
+
+        var idPerso = sessionStorage.getItem("ID_PERSONAGEM")
+
+        if(idPerso != "null"){
+            document.getElementById("perfil").style.display=""
+            document.getElementById("personagem").style.display="none"
+        }
+        else if(idPerso == "null"){
+            document.getElementById("perfil").style.display="none"
+            document.getElementById("personagem").style.display=""
+        }
 
     const labels = [
         'Lakers',

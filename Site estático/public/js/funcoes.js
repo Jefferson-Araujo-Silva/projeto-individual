@@ -6,15 +6,21 @@ function validarSessao() {
     var idUsuario = sessionStorage.ID_USUARIO;
     var nome = sessionStorage.NOMEUSER_USUARIO;
     var arena = sessionStorage.ARENA_FRANQUIA;
+    var idPerso = sessionStorage.ID_PERSONAGEM;
+    var nomePerso = sessionStorage.NOME_PERSONAGEM;
 
     var b_usuario = document.getElementById("b_usuario");
+    var perfil = document.getElementById("perfil");
 
     if (email != null && nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         b_usuario.innerHTML = idUsuario;
 
         finalizarAguardar();
-    } else {
+    }
+    if(idPerso == null){
+    }
+    else {
         window.location = "../login.html";
     }
 }
