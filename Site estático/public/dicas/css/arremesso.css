@@ -23,8 +23,12 @@ main{
 
 .container1 p{
     margin: 20px;
-    width: 40%;
+    width: 100%;
 
+}
+
+font{
+    color: orange;
 }
 .text2 h4{
     text-align: right;

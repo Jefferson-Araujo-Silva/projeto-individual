@@ -25,7 +25,7 @@ main{
 
 .container1 p{
     margin: 20px;
-    width: 40%;
+    width: 100%;
 
 }
 .text2 h4{
@@ -49,4 +49,8 @@ main{
 .container2 p{
     width: 50%;
     margin-left: 10%;
+}
+
+font{
+    color: orange;
 }
