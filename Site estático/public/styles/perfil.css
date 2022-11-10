@@ -7,6 +7,10 @@
 }
 .janela{
 margin: 10% auto 0% 10%;
-width: 50%;
-flex-direction: column;
+justify-content: space-around;
+display: flex;
+}
+
+.container2{
+    
 }

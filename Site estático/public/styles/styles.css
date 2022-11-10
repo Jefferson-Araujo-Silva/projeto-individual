@@ -131,7 +131,7 @@ input{
     text-align: center;
   }
   .footer .container2 .closed, .footer .container4 .closed{
-    margin-left: 30%;
+    margin-left: 25%;
   }
   
   .footer .container2 .version, .footer .container4 .version {
@@ -139,7 +139,7 @@ input{
   }
   .imgLogo{
     position: absolute;
-    margin-left: -90%;
+    margin-left: -80%;
     margin-top: 5%;
   }
   #logoFooter{
@@ -148,7 +148,7 @@ input{
     width: 100px;
 }
 .social{
-    margin-left: 10%;
+    margin-left: 20%;
 }
 #social{
     justify-content: space-between;
