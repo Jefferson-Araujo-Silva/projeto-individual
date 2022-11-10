@@ -61,8 +61,7 @@ header a:hover{
 main{
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
-    align-items: center;
+    margin-top: 50px;
 }
 
 h2{
