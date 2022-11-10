@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Dashboards</title>
+    <title>Our House | Personagem</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/perfil.css">
@@ -34,9 +34,6 @@
         <img src="https://img.icons8.com/small/96/7950F2/video-playlist.png" id="social"><span>Tutoriais</span>
     </a>
     
-    <a href="">
-        <img src="https://img.icons8.com/small/96/7950F2/controller.png" id="social"><span>Minigames</span>
-    </a>
     
     <a href="login.html" onclick="sair()">
         <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"><span>Logout</span>
@@ -54,8 +51,10 @@
     <div class="container2">
         <h3>Infos dos seus últimos jogos</h3>
         <h4>Contra: <span id="b_adversario">Adv</span></h4>
+        <h4>Resultado: <span id="b_resultado"></span></h4>
         <h4>Arena: <span id="b_arena">Estádio</span></h4>
         <h4>Pontuação do seu jogador: <span id="b_pontosJogador">X</span></h4>
+        <h4>Pontuação do seu jogador em cada quarto: <span id="b_pontosJogador4">X</span></h4>
         <h4>Placar final: <span id="b_time"></span> <span id="b_pontosTime1">X</span> vs <span id="b_pontosTime2">X</span> <span id="b_adv"></span></h4>
 
         <button onclick="jogar()">Jogar partida</button>
@@ -72,18 +71,17 @@
     b_posicao.innerHTML = sessionStorage.POSICAO_PERSONAGEM;
 
     var pontosJogador = []
-    var vitoria = []
-    var derrota = []
     var equipes = ['Hawks', 'Lakers', 'Celtics', 'Bucks', 'Nets', 'Warriors', 'Jazz', 'Spurs', 'Raptors', 'Cavaliers', 'Mavericks', 'Pelicans', 'Thunder', 'Heat', 'Grizzlies', 'Kings', 'Hornets', 'Knicks', 'Clippers', 'Magic', 'Timberwolves', 'Blazers', 'Suns', 'Nuggets', 'Wizards', '76ers', 'Bulls', 'Pistons', 'Rockets', 'Pacers']
 
     function jogar(){
-
+        pontosJogador = []
         var time = sessionStorage.EQUIPE_PERSONAGEM
         var adversario = equipes[Math.floor(Math.random() * equipes.length)]
 
         var time1 = 0
         var time2 = 0
         var jogador = 0
+        var resultado
         if(time != adversario){
             for(i = 0; i <= 3; i++){
 
@@ -104,10 +102,19 @@
 
                 jogador += ptJogador
             }
+            if(time1 > time2){
+                resultado = 'vitoria'
+            }
+            else{
+                resultado = 'derrota'
+            }
+
             b_pontosJogador.innerHTML = jogador
+            b_pontosJogador4.innerHTML = pontosJogador
             b_pontosTime1.innerHTML = time1
             b_pontosTime2.innerHTML = time2
             b_time.innerHTML = time
+            b_resultado.innerHTML = resultado
             b_adv.innerHTML = adversario
             b_adversario.innerHTML = adversario
         }

@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Our House | Dashboard</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/header-left.css">
+    <link rel="icon" type="imagem/png" href="./components/images/icon.png" />
+    <link rel="stylesheet" href="./styles/tutoriais.css">
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    
+    <div class="header-left">
+        <a href="./index.html"><img src="./components/images/logo.png" id="logo"alt=""></a>           
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span></h3>
+            <h3>Time: <span id="b_franquia">Franquia</span></span!</h3></span>
+        </div>
+        
+        <a href="personagem.html" id="personagem">
+        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Personagem</span>
+        </a>
+        <a href="perfil.html" id="perfil">
+            <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Personagem</span>
+        </a>
+
+        <a href="./dashboard.html">
+            <img src="https://img.icons8.com/small/96/7950F2/bar-chart.png" id="social"><span>Dashboard</span> 
+        </a>
+
+        <a href="">
+            <img src="https://img.icons8.com/small/96/7950F2/video-playlist.png" id="social"><span>Tutoriais</span>
+        </a>
+
+
+        <a href="login.html" onclick="sair()">
+            <img src="https://img.icons8.com/small/96/7950F2/exit.png" id="social"><span>Logout</span>
+        </a> 
+    </div>
+
+    <div class="title">
+        <h1>Bem vindo à tela de tutoriais</h1>
+        <h4>Escolha abaixo que tipo de treinamento deseja ver</h4>
+    </div>
+
+    <div class="janela">
+        <select name="" id="sel_treinos">
+            <option value="">---Selecione um----</option>
+            <option value="arremesso">Arremesso</option>
+            <option value="drible">Drible</option>
+            <option value="bandeja">Bandeja</option>
+            <option value="defesa">Defesa</option>
+            <option value="posicoes">Posições</option>
+            <option value="regras">Regras</option>
+        </select>
+    </div>
+
+</body>
+
+<script>
+
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_franquia.innerHTML = sessionStorage.TIME_FRANQUIA;
+
+
+    var idPerso = sessionStorage.getItem("ID_PERSONAGEM")
+
+    if(idPerso != "null"){
+        document.getElementById("perfil").style.display=""
+        document.getElementById("personagem").style.display="none"
+    }
+    else if(idPerso == "null"){
+        document.getElementById("perfil").style.display="none"
+        document.getElementById("personagem").style.display=""
+    }
+
+    
+    function sair(){
+        limparSessao()
+    }
+
+
+</script>

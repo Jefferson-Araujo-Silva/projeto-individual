@@ -1,0 +1,15 @@
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title h1{
+    border-bottom: 2px solid rgb(122, 14, 201);
+}
+.janela{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
