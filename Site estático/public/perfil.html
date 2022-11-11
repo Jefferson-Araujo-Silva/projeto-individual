@@ -49,10 +49,10 @@
             <h4>Franquia que joga: <span id="b_equipe"></span></h4>
     </div>
     <div class="container2">
-        <h3>Infos dos seus últimos jogos</h3>
+        <h3>Info do seu último jogo</h3>
         <h4>Contra: <span id="b_adversario">Adv</span></h4>
         <h4>Resultado: <span id="b_resultado"></span></h4>
-        <h4>Arena: <span id="b_arena">Estádio</span></h4>
+        <h4>Local: <span id="b_arena">Local</span></h4>
         <h4>Pontuação do seu jogador: <span id="b_pontosJogador">X</span></h4>
         <h4>Pontuação do seu jogador em cada quarto: <span id="b_pontosJogador4">X</span></h4>
         <h4>Placar final: <span id="b_time"></span> <span id="b_pontosTime1">X</span> vs <span id="b_pontosTime2">X</span> <span id="b_adv"></span></h4>
@@ -61,14 +61,14 @@
 </div>
 <div class="partida">
     <div class="btn">
-        <button onclick="jogar()">Jogar partida</button>
+        <button id="btn" onclick="jogar()">Jogar partida</button>
     </div>
-    <div class="resultado">      
+    <!-- <div class="resultado">      
         <h4>Contra: <span id="b_partidaAdv"></span></h4>
         <h4>Arena: <span id="b_partidaArena"></span></h4>
         <h4>Placar final: <span id="b_partidaPlacar"></span></h4>
         <h4>Pontos por quarto: <span id="b_partidaQuarto"></span></h4>
-    </div>
+    </div> -->
 </div>
 </body>
 
@@ -84,6 +84,7 @@
     var equipes = ['Hawks', 'Lakers', 'Celtics', 'Bucks', 'Nets', 'Warriors', 'Jazz', 'Spurs', 'Raptors', 'Cavaliers', 'Mavericks', 'Pelicans', 'Thunder', 'Heat', 'Grizzlies', 'Kings', 'Hornets', 'Knicks', 'Clippers', 'Magic', 'Timberwolves', 'Blazers', 'Suns', 'Nuggets', 'Wizards', '76ers', 'Bulls', 'Pistons', 'Rockets', 'Pacers']
 
     function jogar(){
+        document.getElementById('btn').style.display="none";
         pontosJogador = []
         var time = sessionStorage.EQUIPE_PERSONAGEM
         var adversario = equipes[Math.floor(Math.random() * equipes.length)]
@@ -119,11 +120,22 @@
                 resultado = 'derrota'
             }
 
+            var sortearArena = parseInt(1 + Math.random() * 2)
+            var arena
+
+            if(sortearArena == 1){
+                arena = 'Em casa'
+            }
+            else{
+                arena = 'Fora de casa'
+            }
+
             b_pontosJogador.innerHTML = jogador
             b_pontosJogador4.innerHTML = pontosJogador
             b_pontosTime1.innerHTML = time1
             b_pontosTime2.innerHTML = time2
             b_time.innerHTML = time
+            b_arena.innerHTML = arena
             b_resultado.innerHTML = resultado
             b_adv.innerHTML = adversario
             b_adversario.innerHTML = adversario

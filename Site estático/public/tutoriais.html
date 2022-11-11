@@ -48,7 +48,7 @@
     </div>
 
     <div class="janela">
-        <select name="" id="sel_treinos">
+        <select name="" id="sel_treinos" onchange="exibir()">
             <option value="">---Selecione um----</option>
             <option value="arremesso">Arremesso</option>
             <option value="drible">Drible</option>
@@ -58,8 +58,10 @@
             <option value="regras">Regras</option>
         </select>
     </div>
-
-
+    <br><br>
+    <center>
+        <iframe id="iframe" width="650" height="390" src="" title="NUNCA MAIS ERRE ARREMESSO NO BASQUETE. DESCUBRA COMO SE TORNAR UM CHUTADOR DE ELITE!" frameborder="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </center>
 </body>
 
 <script>
@@ -80,6 +82,28 @@
         document.getElementById("personagem").style.display=""
     }
 
+    function exibir(){
+        var treino = sel_treinos.value;
+        
+        if(treino == 'arremesso'){
+            iframe.src = 'https://www.youtube.com/embed/aUibLszj6Jg'
+        }
+        else if(treino == 'drible'){
+            iframe.src = 'https://www.youtube.com/embed/Nys6iOhtjp0'
+        }
+        else if(treino == 'bandeja'){
+            iframe.src = 'https://www.youtube.com/embed/W5tfjrMyFUc'
+        }
+        else if(treino == 'defesa'){
+            iframe.src = 'https://www.youtube.com/embed/UnZYh2BoUfg'
+        }
+        else if(treino == 'posicoes'){
+            iframe.src = 'https://www.youtube.com/embed/qHff-KA6L3Q'
+        }
+        else if(treino == 'regras'){
+            iframe.src = 'https://www.youtube.com/embed/jj41DcSuLdA'
+        }
+    }
     
     function sair(){
         limparSessao()
