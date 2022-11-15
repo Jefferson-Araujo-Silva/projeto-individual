@@ -22,3 +22,14 @@
     justify-content: center;
     align-items: center;
 }
+#btn{
+    background-color: rgb(122, 14, 201);
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(122, 14, 201);
+    padding: 10px;
+    border-radius: 15px;
+}
+#btn:hover{
+    cursor: pointer;
+}

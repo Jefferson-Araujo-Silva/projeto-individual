@@ -13,3 +13,9 @@
     align-items: center;
     justify-content: center;
 }
+select{
+    color: rgb(96, 96, 96);
+    font-family: poppinsregular;
+    margin-top: px;
+    border-radius: 15px;
+}

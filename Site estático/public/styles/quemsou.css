@@ -1,0 +1,160 @@
+body{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+    
+header{
+    display: flex;
+    /* position: fixed; */
+    flex-direction: row;
+    margin-top: -1%;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    margin-right: -10%;
+    height: 125px;
+    width: 125px;
+}
+#logoName{
+    height: 140px;
+    width: 140px;
+    /* position: relative; */
+    margin-right: -5%;
+}
+
+
+header li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+    color:white;
+}
+
+header a:hover{
+    color: rgb(122, 14, 201);
+    transition: 0.3s;
+}
+
+#inscreva-se-btn{
+    border: 2px solid rgb(122, 14, 201);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#inscreva-se-btn:hover{
+    background-color: rgb(122, 14, 201);
+    color: white;
+}
+
+.title{
+    flex-direction: column;
+}
+
+.text{
+    width: 50%;
+}
+
+.border{
+    height: 50vh;
+    border-left: 4px solid rgb(122, 14, 201);
+}
+
+.membros h1{
+    font-size: 30px;
+}
+
+
+.foto{
+    height: 10rem;
+    width: 10rem;
+    background-size: cover;
+    border-radius: 200px;
+    margin-right: 150px;
+    border: 4px solid rgb(122, 14, 201);
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.foto{
+    background-image: url(../components/images/jefferson.png);
+    background-size: cover;
+}
+
+.content{
+    display: flex;
+}
+.border{
+    position: absolute;
+    margin-left: -300px;
+}
+.content .container2{
+    display: flex;
+}
+.container2 h1{
+    margin-left: -45%;
+}
+
+#logoFooter{
+    align-items: flex-start;
+    height: 100px;
+    width: 100px;
+}
+
+#social{
+    justify-content: space-between;
+    /* margin-left: 10%; */
+    /* position: absolute; */
+    height: 50px;
+    width: 50px;
+}
+
+.footer {
+    background-color: #000000;
+    height: 150px;
+    width: 127%;
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -14%;
+   margin-top: 15%;
+}
+
+.footer .container2 {
+    justify-content: center;
+    text-align: center;
+}
+.footer .container2 .version {
+    font-size: 12px;
+}
+
+.footer .container{
+    margin-left: 50px;
+}
+.footer .container3{
+    margin-right: 50px;
+}
+font{
+    color: orange;
+}
+
