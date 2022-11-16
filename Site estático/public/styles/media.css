@@ -9,7 +9,7 @@
     }
 
     h2{
-        font-size: 38px;
+        font-size: 35px;
     }
 
     form{
@@ -27,5 +27,9 @@
 
     ul{
         text-align: center;
+    }
+    .footer{
+        width: 116%;
+        margin-top: 29%;
     }
 }

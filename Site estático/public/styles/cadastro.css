@@ -1,17 +1,12 @@
-body{
-    /* background-image: url("http://static1.squarespace.com/static/5702d5548259b5d3259d5a84/t/5e2e33f954f647335ddc5685/1580086266892/Gantry_Social.png?format=1500w"); */
-    background-repeat: no-repeat;
-    background-size: 110%;
+main{
+    margin-top: 0%;
 }
 
 .container2{
-    margin-top: -3%;
+    display: flex;
+    flex-direction: column;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
-    margin-right: -10%;
-}
-.container1{
-    margin-top: -3%;
 }
 
 .container1 img{
@@ -23,17 +18,17 @@ body{
     display: flex;
     height: 100%;
     width: 100%;
+    justify-content: center;
 }
 
 img{
-    width: 120%;
+    width: 100%;
 }
 
 .container1 .senha{
-    position:absolute;
-    margin-top: -25%;
-    margin-left: 20%;
+    position: absolute;
     font-weight: bolder;
+    margin-top: 15%;
 }
 
 .container2{

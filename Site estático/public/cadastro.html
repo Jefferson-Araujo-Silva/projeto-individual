@@ -17,17 +17,18 @@
         <div class="container1">
             <div class="div_img">
                 <img src="./components/images/basket.png" alt="" id="imagem-cesta">
-            </div>
-            <div class="senha" id="senha">
-                <p id="senha">
-                    Senha inválida!
-                    Sua senha deve conter: <br>
-                    - 1 Letra maíuscula <br>
-                    - 1 Letra minúscula <br>
-                    - 1 Número <br>
-                    - 1 caractere especial!
-                </p>    
-            </div> 
+                    <p class="senha" id="senha">
+                        Senha inválida!
+                        Sua senha deve conter: <br>
+                        - 1 Letra maíuscula <br>
+                        - 1 Letra minúscula <br>
+                        - 1 Número <br>
+                        - 1 caractere especial!
+                    </p> 
+                </div>
+               
+            <!-- <div class="senha" id="senha">
+            </div>  -->
         </div>
         <div class="container2">
             <div class="titleForm">
@@ -93,7 +94,7 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = in_nome.value;
         var emailVar = in_email.value;
-        var franquiaVar = Number(franquias.value)
+        var franquiaVar = Number(franquias.value);
         senhaVar = in_senha.value;
         var confirmacaoSenhaVar = in_confirmSenha.value;
         var forca = 0;

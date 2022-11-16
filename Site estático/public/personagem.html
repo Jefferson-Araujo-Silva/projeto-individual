@@ -138,7 +138,7 @@
 
             if (resposta.ok) {
                 
-                alert ("Boa! Personagem cadastrado com sucesso")
+                window.alert ("Boa! Personagem cadastrado com sucesso")
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
@@ -150,7 +150,7 @@
                     
                     
                     setTimeout(function () {
-                        window.location.href = "dashboard.html";
+                        window.location.href = "./perfil.html";
                     }, 1000); // apenas para exibir o loading
                     
                 });
