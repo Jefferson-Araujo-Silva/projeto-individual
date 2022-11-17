@@ -134,12 +134,31 @@ function cadastrar(req, res) {
                     }
                 }
 
+                function buscarPerso(req, res) {
+                
+                    var idUsuario = req.body.idUsuario;
+                
+                    console.log(`Recuperando o personagem`);
+                
+                    buscarPerso(idUsuario).then(function (resultado) {
+                        if (resultado.length > 0) {
+                            res.status(200).json(resultado);
+                        } else {
+                            res.status(204).send("Nenhum resultado encontrado!")
+                        }
+                    }).catch(function (erro) {
+                        console.log(erro);
+                        console.log("Houve um erro ao buscar o personagem.", erro.sqlMessage);
+                        res.status(500).json(erro.sqlMessage);
+                    });
+                }
             
             
-            module.exports = {
-                entrar,
+    module.exports = {
+    entrar,
     cadastrar,
     listar,
     testar,
     cadastrarPerso,
+    buscarPerso,
 }

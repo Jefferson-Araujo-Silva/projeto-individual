@@ -18,9 +18,13 @@ router.post("/cadastrar", function (req, res) {
 router.post("/cadastrarPerso", function (req, res) {
     usuarioController.cadastrarPerso(req, res);
 })
+router.get("/autenticarPerso", function (req, res) {
+    usuarioController.buscarPerso(req, res);
+});
 
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+
 
 module.exports = router;

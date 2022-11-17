@@ -78,6 +78,17 @@
     b_equipe.innerHTML = sessionStorage.EQUIPE_PERSONAGEM;
     b_nome.innerHTML = sessionStorage.NOME_PERSONAGEM;
     b_posicao.innerHTML = sessionStorage.POSICAO_PERSONAGEM;
+    var idUsuario = Number(sessionStorage.getItem("ID_USUARIO"))
+
+    window.onload = verificarPersonagem();
+
+    function verificarPersonagem(){
+        fetch("/usuarios/autenticarPerso").then(function (resposta) {
+            if(resposta.ok){
+                alert('personagem encontrado')
+            }
+        })
+    }
 
     var pontosJogador = []
     var equipes = ['Hawks', 'Lakers', 'Celtics', 'Bucks', 'Nets', 'Warriors', 'Jazz', 'Spurs', 'Raptors', 'Cavaliers', 'Mavericks', 'Pelicans', 'Thunder', 'Heat', 'Grizzlies', 'Kings', 'Hornets', 'Knicks', 'Clippers', 'Magic', 'Timberwolves', 'Blazers', 'Suns', 'Nuggets', 'Wizards', '76ers', 'Bulls', 'Pistons', 'Rockets', 'Pacers']
