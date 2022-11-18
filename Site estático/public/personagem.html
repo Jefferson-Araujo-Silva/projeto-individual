@@ -22,8 +22,8 @@
         <h3>Time: <span id="b_franquia">Franquia</span></span!</h3></span>
     </div>
         
-    <a href="./perfil.html">
-        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Perfil</span>
+    <a href="./personagem.html">
+        <img src="https://img.icons8.com/small/96/7950F2/user.png" id="social"><span>Personagem</span>
     </a>
        
     <a href="./dashboard.html">
@@ -40,13 +40,13 @@
 </div>
 <div class="title">
     <h1>Crie seu personagem!</h1>
-    <h4>Crie um personagem para acumular pontos nos minigames!</h4>
+    <h4>Crie um personagem para jogar partidas!</h4>
 </div>
 <div class="janela">
     <div class="container">
             <p>dê um nome ao seu personagem:</p>
             <input type="text" id="in_nomePerso">
-            <p>Escolha a posição do seu personagem:</p>
+            <p>Escolha a posição que seu personagem vai jogar:</p>
             <select name="" id="sel_posicaoPerso">
                 <option value="PG">PG</option>
                 <option value="SF">SF</option>
@@ -96,8 +96,8 @@
 
 <script>
 
-    b_usuario.innerHTML = localStorage.NOME_USUARIO;
-    b_franquia.innerHTML = localStorage.TIME_FRANQUIA;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_franquia.innerHTML = sessionStorage.TIME_FRANQUIA;
     function cadastrarPerso() {
         aguardar();
 
