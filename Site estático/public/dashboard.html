@@ -152,49 +152,8 @@
             config
         );
 
-        // setTimeout(() => atualizarGrafico(dados, myChart), 2000);
     }
-
-//     function atualizarGrafico(idFranquia, dados, myChart) {
-
-//         fetch(`/medidas/tempo-real/${idFranquia}`, { cache: 'no-store' }).then(function (response) {
-//         if (response.ok) {
-//         response.json().then(function (novoRegistro) {
-
-//             console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-//             console.log(`Dados atuais do gráfico:`);
-//             console.log(dados);
-
-
-//             // if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
-//             //     console.log("---------------------------------------------------------------")
-//             //     console.log("Como não há dados novos para captura, o gráfico não atualizará.")
-//             //     console.log("Horário do novo dado capturado:")
-//             //     console.log(novoRegistro[0].momento_grafico)
-//             //     console.log("Horário do último dado capturado:")
-//             //     console.log(dados.labels[dados.labels.length - 1])
-//             //     console.log("---------------------------------------------------------------")
-//             // } else {
-//                 // tirando e colocando valores no gráfico
-
-
-//                 // myChart.update();
-//             // }
-
-//             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-//             proximaAtualizacao = setTimeout(() => atualizarGrafico(idFranquia, dados, myChart), 2000);
-//         });
-//     } else {
-//         console.error('Nenhum dado encontrado ou erro na API');
-//         // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-//         proximaAtualizacao = setTimeout(() => atualizarGrafico(idFranquia, dados, myChart), 2000);
-//     }
-// })
-//     .catch(function (error) {
-//         console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-//     });
-
-// }
+    
     function sair(){
         limparSessao()
     }
