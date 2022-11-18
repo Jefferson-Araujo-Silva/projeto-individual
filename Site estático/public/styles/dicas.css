@@ -27,7 +27,7 @@ main{
 main #text1{
     display: flex;
     text-align: left;
-    position: absolute;
+    position:absolute;
     width: 45%;
     margin-top: 25%;
 }
@@ -92,4 +92,6 @@ main #img2{
     color: white;
     transition: 0.9s;
 }
-
+font{
+    color: #ffa500;
+}
