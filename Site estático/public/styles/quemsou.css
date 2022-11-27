@@ -78,7 +78,7 @@ header a:hover{
 }
 
 
-.foto{
+.foto, .foto2{
     height: 10rem;
     width: 10rem;
     background-size: cover;
@@ -96,6 +96,11 @@ header a:hover{
 
 .foto{
     background-image: url(../components/images/jefferson.png);
+    background-size: cover;
+}
+
+.foto2{
+    background-image: url(https://images.wallpapersden.com/image/download/trae-young-atlanta-hawks-photoshoot_bGxra2mUmZqaraWkpJRmamhrrWdlaW0.jpg);
     background-size: cover;
 }
 
@@ -157,4 +162,3 @@ header a:hover{
 font{
     color: orange;
 }
-
